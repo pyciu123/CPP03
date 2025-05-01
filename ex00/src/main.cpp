@@ -1,23 +1,20 @@
 #include "../includes/ClapTrap.hpp"
+#include <iostream>
 
 int main()
 {
-	ClapTrap clap("john");
+    // ClapTrap
+	std::cout << "\n=== ClapTrap Test ===" << std::endl;
+	ClapTrap clap("Clappy");
+	clap.attack("enemy");
+	clap.beRepaired(5);
+	clap.attack("another enemy");
 
-	clap.attack("marian");
-	clap.takeDamage(5);
-	clap.beRepaired(2);
-	clap.attack("marian");
-	clap.attack("marian");
-	clap.attack("marian");
-	clap.attack("marian");
-	clap.attack("marian");
-	clap.attack("marian");
-	clap.attack("marian");
-	clap.attack("marian");
-	clap.attack("marian");
-	clap.attack("marian");
-	clap.takeDamage(10);
-	clap.beRepaired(10);
-	clap.attack("marian");
+	std::cout << "--- Clappy takes fatal damage ---" << std::endl;
+	clap.takeDamage(20); // kills
+	clap.attack("enemy");
+	clap.beRepaired(3);
+
+	std::cout << "\n=== Destructors will be called now ===" << std::endl;
+	return 0;
 }

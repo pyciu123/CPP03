@@ -3,31 +3,44 @@
 #include "../includes/FragTrap.hpp"
 #include <iostream>
 
-int main() {
-	std::cout << "\n=== Death Test ===" << std::endl;
+int main()
+{
+    // ClapTrap
+	std::cout << "\n=== ClapTrap Test ===" << std::endl;
+	ClapTrap clap("Clappy");
+	clap.attack("enemy");
+	clap.beRepaired(5);
+	clap.attack("another enemy");
 
-	// ClapTrap — test
-	std::cout << "\n--- ClapTrap ---" << std::endl;
-	ClapTrap alpha("Alpha");
-	alpha.takeDamage(1);
-	alpha.attack("Target");
-	alpha.beRepaired(5);
+	std::cout << "--- Clappy takes fatal damage ---" << std::endl;
+	clap.takeDamage(20); // kills
+	clap.attack("enemy");
+	clap.beRepaired(3);
 
-	// ScavTrap — test
-	std::cout << "\n--- ScavTrap ---" << std::endl;
-	ScavTrap bravo("Bravo");
-	bravo.takeDamage(15);
-	bravo.attack("Target");
-	bravo.guardGate();
+    // ScavTrap
+	std::cout << "\n=== ScavTrap Test ===" << std::endl;
+	ScavTrap scav("Scavy");
+	scav.attack("zombie");
+	scav.beRepaired(10);
+	scav.guardGate();
 
-	// FragTrap — test
-	std::cout << "\n--- FragTrap ---" << std::endl;
-	FragTrap charlie("Charlie");
-	charlie.takeDamage(20);
-	charlie.attack("Target");
-	charlie.beRepaired(30);
-	charlie.highFivesGuys();
+	std::cout << "--- Scavy takes fatal damage ---" << std::endl;
+	scav.takeDamage(120);
+	scav.attack("undead");
+	scav.guardGate();
 
-	std::cout << "\n=== END ===" << std::endl;
+    // FragTrap
+	std::cout << "\n=== FragTrap Test ===" << std::endl;
+	FragTrap frag("Fraggy");
+	frag.attack("robot");
+	frag.beRepaired(8);
+	frag.highFivesGuys();
+
+	std::cout << "--- Fraggy takes fatal damage ---" << std::endl;
+	frag.takeDamage(200);
+	frag.attack("cyber ghost");
+	frag.highFivesGuys();
+
+	std::cout << "\n=== Destructors will be called now ===" << std::endl;
 	return 0;
 }
