@@ -17,7 +17,7 @@ FragTrap::FragTrap(const std::string name) : ClapTrap(name)
 	std::cout << "FragTrap " << _name << " created!" << std::endl; 
 }
 
-FragTrap::FragTrap(const ClapTrap &copy) : ClapTrap(copy)
+FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)
 {
 	std::cout << "Claptrap " << _name << " copied!" << std::endl;
 }
@@ -47,5 +47,5 @@ void FragTrap::highFivesGuys()
 		std::cout << "Fragtrap " << _name << " is dead and cannot say anything!" << std::endl;
 		return;
 	}
-	std::cout << "FragTrap " << _name << ": Hey guys! DO you want a high five? :)" << std::endl;
+	std::cout << "FragTrap " << _name << ": Hey guys! Do you want a high five? :)" << std::endl;
 }

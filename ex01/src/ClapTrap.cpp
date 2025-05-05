@@ -76,9 +76,10 @@ void ClapTrap::beRepaired(unsigned int amount)
 	}
 	if (_energyPoints <= 0)
 	{
-		std::cout << "ClapTrap " << _name << " don't have enought energy points to attack!" << std::endl;
+		std::cout << "ClapTrap " << _name << " don't have enought energy points to be repaired!" << std::endl;
 		return ;
 	}
 	_hitPoints += amount;
-	std::cout << "ClapTrap " << _name << " is repaired and get " << amount << " points. Now its " << _energyPoints << " total!" << std::endl;
+	_energyPoints--;
+	std::cout << "ClapTrap " << _name << " is repaired and get " << amount << " points. Now its " << _hitPoints << " total!" << std::endl;
 }

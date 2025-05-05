@@ -17,7 +17,7 @@ ScavTrap::ScavTrap(const std::string name) : ClapTrap(name)
 	std::cout << "ScavTrap " << _name << " created!" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ClapTrap &copy) : ClapTrap(copy)
+ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy)
 {
 	std::cout << "Claptrap " << _name << " copied!" << std::endl;
 }

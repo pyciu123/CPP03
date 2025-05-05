@@ -55,6 +55,11 @@ int main()
 	diamond.beRepaired(50);
 	diamond.whoAmI();
 
+	// Memory alocation
+	ClapTrap *test = new DiamondTrap();
+	test->attack("asdjbn");
+
 	std::cout << "\n=== Destructors will be called now ===" << std::endl;
+	delete test;
 	return 0;
 }

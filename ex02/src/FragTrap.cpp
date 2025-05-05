@@ -17,9 +17,9 @@ FragTrap::FragTrap(const std::string name) : ClapTrap(name)
 	std::cout << "FragTrap " << _name << " created!" << std::endl; 
 }
 
-FragTrap::FragTrap(const ClapTrap &copy) : ClapTrap(copy)
+FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)
 {
-	std::cout << "Claptrap " << _name << " copied!" << std::endl;
+	std::cout << "FragTrap " << _name << " copied!" << std::endl;
 }
 
 FragTrap &FragTrap::operator=(const FragTrap &other)

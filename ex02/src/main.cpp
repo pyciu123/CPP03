@@ -41,6 +41,11 @@ int main()
 	frag.attack("cyber ghost");
 	frag.highFivesGuys();
 
+	// Memory alocation
+	ClapTrap *test = new ScavTrap();
+	test->attack("asdjbn");
+
 	std::cout << "\n=== Destructors will be called now ===" << std::endl;
+	delete test;
 	return 0;
 }
